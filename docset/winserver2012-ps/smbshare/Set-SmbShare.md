@@ -12,7 +12,7 @@ Modifies the properties of the Server Message Block (SMB) share.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Query
 ```
 Set-SmbShare [-AsJob] [-CachingMode <CachingMode>] [-CATimeout <UInt32>] [-CimSession <CimSession[]>]
  [-ConcurrentUserLimit <UInt32>] [-ContinuouslyAvailable <Boolean>] [-Description <String>]
@@ -20,7 +20,7 @@ Set-SmbShare [-AsJob] [-CachingMode <CachingMode>] [-CATimeout <UInt32>] [-CimSe
  [-SecurityDescriptor <String>] [-ThrottleLimit <Int32>] -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### InputObject (cdxml)
 ```
 Set-SmbShare [-Name] <String[]> [[-ScopeName] <String[]>] [-AsJob] [-CachingMode <CachingMode>]
  [-CATimeout <UInt32>] [-CimSession <CimSession[]>] [-ConcurrentUserLimit <UInt32>]
@@ -299,6 +299,23 @@ Specifies the security descriptor for the SMB share in string format.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SmbInstance
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
+
+```yaml
+Type: SmbInstance
+Parameter Sets: Query
+Aliases: 
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named
